@@ -20,16 +20,15 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           
           {/* SECTION LOGO SEUL */}
-<div className="flex items-center py-2">
-  <Link to="/" className="flex items-center group">
-    <img 
-      src={logo} 
-      alt="Logo Agro Business Badouha" 
-      /* Taille augmentée : h-20 sur mobile, h-28 sur ordinateur */
-      className="h-20 w-auto md:h-27 transition-all duration-300 group-hover:scale-105" 
-    />
-  </Link>
-</div>
+          <div className="flex items-center py-2">
+            <Link to="/" className="flex items-center group">
+              <img 
+                src={logo} 
+                alt="Logo Agro Business Badouha" 
+                className="h-20 w-auto md:h-27 transition-all duration-300 group-hover:scale-105" 
+              />
+            </Link>
+          </div>
 
           {/* DESKTOP NAV */}
           <div className="hidden md:flex items-center space-x-8">
@@ -42,8 +41,11 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            {/* LIEN MODIFIÉ CI-DESSOUS */}
             <a 
-              href="https://votre-app-gestion.com" 
+              href="https://app.badouha.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="bg-green-700 text-white px-5 py-2.5 rounded-xl hover:bg-green-800 transition shadow-lg shadow-green-100 font-bold text-sm"
             >
               Espace Gestion
@@ -82,8 +84,11 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-4 px-4">
+            {/* LIEN MODIFIÉ CI-DESSOUS */}
             <a 
-              href="https://votre-app-gestion.com" 
+              href="https://app.badouha.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="block w-full text-center bg-green-700 text-white py-4 rounded-2xl font-black shadow-lg"
             >
               ESPACE GESTION
