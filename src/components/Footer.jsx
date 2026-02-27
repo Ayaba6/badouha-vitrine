@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Mail, MapPin, Phone, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, Phone, ArrowUpRight, MessageCircle, Lock } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,7 +21,6 @@ export default function Footer() {
               Leader de l'agriculture hors-sol au Burkina Faso. Nous formons et équipons les entrepreneurs agricoles de demain pour une autonomie durable.
             </p>
             <div className="flex gap-4">
-              {/* LIEN FACEBOOK OFFICIEL */}
               <a 
                 href="https://www.facebook.com/agrobusinessbadouha" 
                 target="_blank" 
@@ -45,6 +44,17 @@ export default function Footer() {
               <li><Link to="/boutique" className="hover:text-agro-lime transition-colors">Boutique Matériel</Link></li>
               <li><Link to="/mediatheque" className="hover:text-agro-lime transition-colors">Médiathèque</Link></li>
               <li><Link to="/contact" className="hover:text-agro-lime transition-colors">Contact & Devis</Link></li>
+              <li className="pt-2 border-t border-white/5">
+                {/* LIEN VERS L'APP DE GESTION */}
+                <a 
+                  href="https://app.badouha.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 text-agro-lime/80 hover:text-agro-lime transition-colors font-bold"
+                >
+                  <Lock size={12} /> Espace Gestion
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -76,7 +86,6 @@ export default function Footer() {
                 <span>Ouagadougou, Burkina Faso</span>
               </li>
               <li className="flex items-center gap-3 group">
-                {/* Icône WhatsApp dédiée */}
                 <div className="text-green-500 group-hover:text-green-400 transition-colors">
                     <MessageCircle size={20} />
                 </div>
